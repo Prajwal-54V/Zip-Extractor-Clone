@@ -8,9 +8,11 @@ import $ from "jquery";
 import { jstree } from "jquery";
 import "react-simple-jstree";
 import useDrivePicker from "react-google-drive-picker";
+import { useDropboxChooser } from "use-dropbox-chooser";
 import JSZipUtils from "jszip-utils";
 import { BuildFolderTree } from "./FolderStructure.js";
 
+// npm i use-dropbox-chooser
 const GOOGLE_DRIVE_CLIENT_ID =
   "115233091202-gnrihfkkaed9f4k42nadgerg2fcnpnl6.apps.googleusercontent.com";
 const GOOGLE_DIRVE_DEVELOPER_KEY = "AIzaSyB29XZv29ASIZXvLsQFrM4s4sAkNbUdq0A";
@@ -20,11 +22,29 @@ export default function Content() {
   const [zipFile, setZipFiles] = useState(null);
   const [hrefs, add_href] = useState([]);
   const inputFileRef = useRef(null);
-  const dropBoxRef = useRef(null);
-  //google drive
+
+  //google drive states
   const [openPicker, authResponse] = useDrivePicker();
   const [gdriveFile, setGdriveFile] = useState("");
 
+  //dropbox file download
+  const { open, isOpen } = useDropboxChooser({
+    appKey: DROP_BOX_API_KEY,
+    chooserOptions: { multiple: false, linkType: "direct" },
+    onSelected: (files) => {
+      var url = files[0].link;
+      var filename = files[0].name;
+      JSZipUtils.getBinaryContent(url, (er, data) => {
+        if (er) console.log("er", er);
+        const blob = new Blob([data], { type: "application/zip" });
+        const f = new File([blob], filename, { type: "application/zip" });
+        showFile(f, false);
+      });
+    },
+  });
+
+  //
+  // downloading file from google drive
   useEffect(() => {
     if (authResponse && gdriveFile) {
       // console.log(gdriveFile);
@@ -193,31 +213,15 @@ export default function Content() {
     });
   };
 
-  const readFileFromGoogleDrive = (file) => {};
-
-  const openDropBox = () => {
-    dropBoxRef.current.click();
-  };
-
-  const handleDropBox = (files) => {
-    // console.log(files[0]);
-    dropBoxFiles.push({ url: files[0].link, filename: files[0].name });
-    console.log(files);
-    // var dbx = new Dropbox({
-    //   accessToken:
-    //     "sl.BOpYOmORiGZsBuJ7dkTCX_4jObGYTDU_qbLJg2VbsMDQYk3_0PRsRqtwZdfOZVpefSVj_SqNQ8sVbGsDgTgbGeapNPHsWjJhsfiHztHpBnaLv4CyXMw8Hk4HvS0AkdldKVsUoQE",
-    // });
-  };
-
   //yet to complete.... :)
-  const fecthFromURL = (driveUrl) => {
+  const fecthFromURL = () => {
     var url, filename;
-    if (driveUrl === null || driveUrl === undefined) {
-      url = prompt("Open file from URL", "https://");
-    } else {
-      url = "https://drive.google.com/uc?export=download&id=" + driveUrl;
-    }
+
+    url = prompt("Open file from URL", "https://");
+
+    // url = "https://drive.google.com/uc?export=download&id=" + driveUrl;
     // url = "http://127.0.0.1:8125/testing1.zip";
+
     filename = url.substring(url.lastIndexOf("/") + 1);
 
     //get file content from url
@@ -306,8 +310,9 @@ export default function Content() {
                     className="dropbox"
                     onClick={(e) => {
                       e.preventDefault();
-                      openDropBox();
+                      open();
                     }}
+                    disabled={isOpen}
                   >
                     <i className="icon"></i>Dropbox
                   </a>
@@ -316,7 +321,7 @@ export default function Content() {
                     className="url"
                     onClick={(e) => {
                       e.preventDefault();
-                      fecthFromURL(null);
+                      fecthFromURL();
                     }}
                   >
                     <i className="icon"></i>URL
@@ -439,20 +444,6 @@ export default function Content() {
       <div className="index-blocks">
         <div className="one-col"> </div>
       </div>
-
-      {/* <DropboxChooser
-        appKey={DROP_BOX_API_KEY}
-        success={(files) => handleDropBox(files)}
-        cancel={() => console.log("error loading from dropbox")}
-        multiselect={false}
-        extensions={[".zip"]}
-      >
-        <div
-          className="dropbox-button"
-          style={{ display: "none" }}
-          ref={dropBoxRef}
-        ></div>
-      </DropboxChooser> */}
     </div>
   );
 }

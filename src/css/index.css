@@ -1,0 +1,13 @@
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Rubik", "Open Sans", sans-serif;
+  font-size: 13px;
+  font-size: 13px;
+  overflow-y: scroll;
+  white-space: nowrap;
+}

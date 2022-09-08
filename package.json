@@ -6,9 +6,17 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.0",
+    "file-saver": "^2.0.5",
+    "gapi": "^0.0.3",
+    "jstree": "^3.3.12",
+    "jszip": "^3.10.1",
+    "jszip-utils": "^0.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-drive-picker": "^1.2.0",
     "react-scripts": "5.0.1",
+    "react-simple-jstree": "^0.2.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +42,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "path-browserify": "^1.0.1",
+    "source-map-loader": "^4.0.0",
+    "vm-browserify": "^1.1.2",
+    "webpack-node-externals": "^3.0.0"
   }
 }

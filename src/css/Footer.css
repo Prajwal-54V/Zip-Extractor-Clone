@@ -1,0 +1,79 @@
+.footer {
+  background-color: #f7f7f7;
+  height: 50px;
+  color: #333;
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 100%;
+  font-weight: 300;
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  flex-direction: row;
+}
+#language-link,
+.footer {
+  position: relative;
+  white-space: nowrap;
+}
+
+.footer .copyright {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-right: 30px;
+}
+
+#language-link {
+  margin-left: auto;
+  cursor: pointer;
+}
+.footer a:last-child {
+  margin-right: 0;
+}
+.footer a {
+  padding: 0;
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer .menu button:hover,
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .menu a {
+  margin-right: 30px;
+}
+#language-link > .icon {
+  margin-right: 4px;
+  vertical-align: middle;
+  opacity: 0.7;
+  margin-top: -1px;
+}
+
+.icon-language {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0a8 8 0 110 16A8 8 0 018 0zm-.381 11.428H4.572a12.829 12.829 0 001.864 3.64c.384.085.78.14 1.183.16v-3.8zm3.81 0H8.38v3.8c.405-.02.8-.075 1.184-.16a12.842 12.842 0 001.864-3.64zm2.947 0h-2.278a13.887 13.887 0 01-1.395 3.289 7.267 7.267 0 003.673-3.289zm-10.474 0H1.624a7.265 7.265 0 003.674 3.289 13.843 13.843 0 01-1.396-3.289zM3.436 8.38H.772c.041.805.214 1.573.497 2.287h2.446a12.96 12.96 0 01-.28-2.287zm8.53 0H8.38v2.286l3.263.001c.185-.75.293-1.513.322-2.286zm3.262 0h-2.663c-.026.777-.12 1.54-.28 2.287h2.446a7.204 7.204 0 00.497-2.286zm-7.609 0H4.035c.029.774.137 1.538.322 2.287l3.262-.001V8.38zM3.781 4.952H1.433A7.199 7.199 0 00.772 7.62h2.66c.024-.909.143-1.8.349-2.667zm7.787 0H8.38v2.667h3.588v-.031a11.374 11.374 0 00-.4-2.636zm3 0h-2.349c.206.867.325 1.758.348 2.667h2.661a7.197 7.197 0 00-.66-2.667zm-6.949 0H4.432a11.358 11.358 0 00-.405 3.003l.004-.336h3.588V4.952zM5.229 1.31l-.204.09a7.268 7.268 0 00-3.18 2.79h2.14c.302-.999.72-1.962 1.245-2.88zM8.382.772L8.38 4.19h2.951A12.88 12.88 0 009.641.949 7.204 7.204 0 008.38.772zm2.388.539l.163.29c.449.83.812 1.696 1.082 2.59h2.141a7.265 7.265 0 00-3.386-2.88zM6.57.903L6.36.95a12.878 12.878 0 00-1.691 3.24l2.95.001V.772A7.25 7.25 0 006.57.903z' fill='%23000'/%3E%3C/svg%3E");
+  width: 16px;
+  height: 16px;
+}
+.icon {
+  display: inline-block;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.footer .menu button {
+  font-family: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  overflow: visible;
+  user-select: none;
+  background-color: transparent;
+  cursor: pointer;
+}

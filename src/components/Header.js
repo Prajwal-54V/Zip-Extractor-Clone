@@ -61,81 +61,161 @@ export default function Header() {
               >
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Video Editor
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Trim Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Merge Videos
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Add Audio to Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Add Image to Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Add Text to Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Remove Logo from Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Crop Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Rotate Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Flip Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Resize Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Loop Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Change Volume
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Change Video Speed
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Stabalize Video
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14' fill='white'%3E%3Cpath fill-rule='evenodd' d='M7 1h3c1.425 0 2.419.001 3.185.08.75.075 1.169.217 1.482.426a3 3 0 01.827.827c.21.313.35.733.427 1.482.078.766.079 1.76.079 3.185s-.001 2.419-.08 3.185c-.075.75-.217 1.169-.426 1.482a3 3 0 01-.827.827c-.313.21-.733.35-1.482.427-.766.078-1.76.079-3.185.079H7c-1.425 0-2.419-.001-3.185-.08-.75-.075-1.169-.217-1.482-.426a3 3 0 01-.827-.827c-.21-.313-.35-.733-.427-1.482C1.001 9.419 1 8.425 1 7s.001-2.419.08-3.185c.075-.75.217-1.169.426-1.482a3 3 0 01.827-.827c.313-.21.733-.35 1.482-.427C4.581 1.001 5.575 1 7 1zM0 7c0-2.809 0-4.213.674-5.222A4 4 0 011.778.674C2.787 0 4.19 0 7 0h3c2.809 0 4.213 0 5.222.674.437.292.812.667 1.104 1.104C17 2.787 17 4.19 17 7c0 2.809 0 4.213-.674 5.222a4.003 4.003 0 01-1.104 1.104C14.213 14 12.81 14 10 14H7c-2.809 0-4.213 0-5.222-.674a4.002 4.002 0 01-1.104-1.104C0 11.213 0 9.81 0 7zm10.467.4a.5.5 0 000-.8L7.8 4.6A.5.5 0 007 5v4a.5.5 0 00.8.4l2.667-2z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Video Recorder
                   </a>
                 </li>
@@ -168,41 +248,81 @@ export default function Header() {
               >
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-atools"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' fill='white'%3E%3Cpath d='M0 5.5a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm12 0a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm-9-2a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm6 0a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm-3-3a.5.5 0 011 0v13a.5.5 0 01-1 0V.5z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Trim Audio
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-atools"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' fill='white'%3E%3Cpath d='M0 5.5a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm12 0a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm-9-2a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm6 0a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm-3-3a.5.5 0 011 0v13a.5.5 0 01-1 0V.5z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Change Volume
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-atools"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' fill='white'%3E%3Cpath d='M0 5.5a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm12 0a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm-9-2a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm6 0a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm-3-3a.5.5 0 011 0v13a.5.5 0 01-1 0V.5z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Change Speed
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-atools"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' fill='white'%3E%3Cpath d='M0 5.5a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm12 0a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm-9-2a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm6 0a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm-3-3a.5.5 0 011 0v13a.5.5 0 01-1 0V.5z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Change Pitch
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-atools"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' fill='white'%3E%3Cpath d='M0 5.5a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm12 0a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm-9-2a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm6 0a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm-3-3a.5.5 0 011 0v13a.5.5 0 01-1 0V.5z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Equalizer
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-atools"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' fill='white'%3E%3Cpath d='M0 5.5a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm12 0a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm-9-2a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm6 0a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm-3-3a.5.5 0 011 0v13a.5.5 0 01-1 0V.5z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Reverse Audio
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-atools"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' fill='white'%3E%3Cpath d='M0 5.5a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm12 0a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm-9-2a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm6 0a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm-3-3a.5.5 0 011 0v13a.5.5 0 01-1 0V.5z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Voice Recorder
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-atools"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' fill='white'%3E%3Cpath d='M0 5.5a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm12 0a.5.5 0 011 0v3a.5.5 0 01-1 0v-3zm-9-2a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm6 0a.5.5 0 011 0v7a.5.5 0 01-1 0v-7zm-3-3a.5.5 0 011 0v13a.5.5 0 01-1 0V.5z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Audio Joiner
                   </a>
                 </li>
@@ -235,6 +355,11 @@ export default function Header() {
               >
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Convert from PDF
                     <img
                       className="icon-dropdown-right"
@@ -248,31 +373,61 @@ export default function Header() {
                   >
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         PDF to Word
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         PDF to Excel
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         PDF to PPT
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         PDF to JPG
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         PDF to PNG
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         PDF to HTML
                       </a>
                     </li>
@@ -280,6 +435,11 @@ export default function Header() {
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Convert to PDF
                     <img
                       className="icon-dropdown-right"
@@ -293,26 +453,51 @@ export default function Header() {
                   >
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         Word to PDF
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         JPG to PDF
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         Excel to PDF
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         PPT to PDF
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="/#">
+                        <img
+                          className="icon icon-vtool"
+                          src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                          alt=""
+                        />
                         PNG to PDF
                       </a>
                     </li>
@@ -320,36 +505,71 @@ export default function Header() {
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Split
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Merge
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Compress
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Unlock
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Protect
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Rotate
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 14 14'%3E%3Cpath fill-rule='evenodd' d='M.001 3a3 3 0 013-3H7.26a3 3 0 012.12.879l2.744 2.742A3 3 0 0113 5.743V11a3 3 0 01-3 3h-7a3 3 0 01-3-3V3zm3-2H7v3.5A2.5 2.5 0 009.5 7h2.501v4a2 2 0 01-2 2h-7a2 2 0 01-2-2V3a2 2 0 012-2zm9 5v-.257a2 2 0 00-.586-1.415L8.673 1.586c-.18-.18-.443-.323-.673-.422V4.5A1.5 1.5 0 009.5 6h2.501z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Add Page Numbers
                   </a>
                 </li>
@@ -382,36 +602,71 @@ export default function Header() {
               >
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='white'%3E%3Cpath fill-rule='evenodd' d='M.218 8.737A7.497 7.497 0 014 2.22v1.183a6.501 6.501 0 003 11.794v1.005A7.5 7.5 0 01.218 8.737zM11 15.482A7.5 7.5 0 007 1.27v1.006a6.5 6.5 0 014 12.072v1.134z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M10.753 12.565a.5.5 0 01.5.5v2.328h2.329a.5.5 0 110 1h-3.329v-3.328a.5.5 0 01.5-.5zM.207 2.726a.5.5 0 00.5.5h2.329v2.328a.5.5 0 001 0V2.226H.707a.5.5 0 00-.5.5z' clip-rule='evenodd'/%3E%3Cpath d='M9.218 8.737a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Audio Converters
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='white'%3E%3Cpath fill-rule='evenodd' d='M.218 8.737A7.497 7.497 0 014 2.22v1.183a6.501 6.501 0 003 11.794v1.005A7.5 7.5 0 01.218 8.737zM11 15.482A7.5 7.5 0 007 1.27v1.006a6.5 6.5 0 014 12.072v1.134z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M10.753 12.565a.5.5 0 01.5.5v2.328h2.329a.5.5 0 110 1h-3.329v-3.328a.5.5 0 01.5-.5zM.207 2.726a.5.5 0 00.5.5h2.329v2.328a.5.5 0 001 0V2.226H.707a.5.5 0 00-.5.5z' clip-rule='evenodd'/%3E%3Cpath d='M9.218 8.737a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Video Converters
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='white'%3E%3Cpath fill-rule='evenodd' d='M.218 8.737A7.497 7.497 0 014 2.22v1.183a6.501 6.501 0 003 11.794v1.005A7.5 7.5 0 01.218 8.737zM11 15.482A7.5 7.5 0 007 1.27v1.006a6.5 6.5 0 014 12.072v1.134z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M10.753 12.565a.5.5 0 01.5.5v2.328h2.329a.5.5 0 110 1h-3.329v-3.328a.5.5 0 01.5-.5zM.207 2.726a.5.5 0 00.5.5h2.329v2.328a.5.5 0 001 0V2.226H.707a.5.5 0 00-.5.5z' clip-rule='evenodd'/%3E%3Cpath d='M9.218 8.737a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Image Converter
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='white'%3E%3Cpath fill-rule='evenodd' d='M.218 8.737A7.497 7.497 0 014 2.22v1.183a6.501 6.501 0 003 11.794v1.005A7.5 7.5 0 01.218 8.737zM11 15.482A7.5 7.5 0 007 1.27v1.006a6.5 6.5 0 014 12.072v1.134z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M10.753 12.565a.5.5 0 01.5.5v2.328h2.329a.5.5 0 110 1h-3.329v-3.328a.5.5 0 01.5-.5zM.207 2.726a.5.5 0 00.5.5h2.329v2.328a.5.5 0 001 0V2.226H.707a.5.5 0 00-.5.5z' clip-rule='evenodd'/%3E%3Cpath d='M9.218 8.737a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Document Converter
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='white'%3E%3Cpath fill-rule='evenodd' d='M.218 8.737A7.497 7.497 0 014 2.22v1.183a6.501 6.501 0 003 11.794v1.005A7.5 7.5 0 01.218 8.737zM11 15.482A7.5 7.5 0 007 1.27v1.006a6.5 6.5 0 014 12.072v1.134z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M10.753 12.565a.5.5 0 01.5.5v2.328h2.329a.5.5 0 110 1h-3.329v-3.328a.5.5 0 01.5-.5zM.207 2.726a.5.5 0 00.5.5h2.329v2.328a.5.5 0 001 0V2.226H.707a.5.5 0 00-.5.5z' clip-rule='evenodd'/%3E%3Cpath d='M9.218 8.737a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Font Converter
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='white'%3E%3Cpath fill-rule='evenodd' d='M.218 8.737A7.497 7.497 0 014 2.22v1.183a6.501 6.501 0 003 11.794v1.005A7.5 7.5 0 01.218 8.737zM11 15.482A7.5 7.5 0 007 1.27v1.006a6.5 6.5 0 014 12.072v1.134z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M10.753 12.565a.5.5 0 01.5.5v2.328h2.329a.5.5 0 110 1h-3.329v-3.328a.5.5 0 01.5-.5zM.207 2.726a.5.5 0 00.5.5h2.329v2.328a.5.5 0 001 0V2.226H.707a.5.5 0 00-.5.5z' clip-rule='evenodd'/%3E%3Cpath d='M9.218 8.737a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Archive Converter
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='white'%3E%3Cpath fill-rule='evenodd' d='M.218 8.737A7.497 7.497 0 014 2.22v1.183a6.501 6.501 0 003 11.794v1.005A7.5 7.5 0 01.218 8.737zM11 15.482A7.5 7.5 0 007 1.27v1.006a6.5 6.5 0 014 12.072v1.134z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M10.753 12.565a.5.5 0 01.5.5v2.328h2.329a.5.5 0 110 1h-3.329v-3.328a.5.5 0 01.5-.5zM.207 2.726a.5.5 0 00.5.5h2.329v2.328a.5.5 0 001 0V2.226H.707a.5.5 0 00-.5.5z' clip-rule='evenodd'/%3E%3Cpath d='M9.218 8.737a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Ebook Converter
                   </a>
                 </li>
@@ -444,6 +699,11 @@ export default function Header() {
               >
                 <li>
                   <a className="dropdown-item" href="/#" id="utilityId">
+                    <img
+                      className="icon icon-vtool"
+                      src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23FFD433' viewBox='0 0 20 20'%3E%3Cpath d='M10 0a1 1 0 00-1 1v1a1 1 0 102 0V1a1 1 0 00-1-1zM7 11a1 1 0 011-1h4a1 1 0 010 2H8a1 1 0 01-1-1z'/%3E%3Cpath fill-rule='evenodd' d='M1.929 1.629a1 1 0 10-1.857.742L2 7.193V17a3 3 0 003 3h10a3 3 0 003-3V6.236l1.894-3.789a1 1 0 10-1.789-.894L15.882 6H3.677L1.93 1.629zM4 17V8h12v9a1 1 0 01-1 1H5a1 1 0 01-1-1z' clip-rule='evenodd'/%3E%3Cpath d='M5.04 1.488A1 1 0 016.97.97l.26.966a1 1 0 01-1.932.518l-.259-.966zM13.477 3.161a1 1 0 01-.707-1.225l.26-.966a1 1 0 111.93.518l-.258.966a1 1 0 01-1.225.707z'/%3E%3C/svg%3E"
+                      alt=""
+                    />
                     Archive Extractor
                   </a>
                 </li>

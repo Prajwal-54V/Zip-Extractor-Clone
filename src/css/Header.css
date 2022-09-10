@@ -9,7 +9,7 @@
 .dropdown-menu {
   border-radius: 0%;
   border: none;
-  width: 190px;
+  width: 210px;
 }
 img.icon {
   margin-left: 7px;
@@ -21,11 +21,10 @@ img.icon-dropdown {
 
 a.dropdown-item {
   width: 100%;
-  padding: 10px 25px;
+  padding: 10px 12px;
   color: white;
   font-family: "Rubik", "Open Sans", sans-serif;
   font-size: 13px;
-  text-align: left;
 }
 a.dropdown-item:hover {
   background-color: #2e2e2e;

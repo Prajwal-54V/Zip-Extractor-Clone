@@ -6,8 +6,9 @@ body {
   min-height: 100vh;
   flex-direction: column;
   font-family: "Rubik", "Open Sans", sans-serif;
+  font-weight: 300;
   font-size: 13px;
-  font-size: 13px;
+
   overflow-y: scroll;
   white-space: nowrap;
 }

@@ -11,12 +11,7 @@ import useDrivePicker from "react-google-drive-picker";
 import { useDropboxChooser } from "use-dropbox-chooser";
 import JSZipUtils from "jszip-utils";
 import { BuildFolderTree } from "./FolderStructure.js";
-
-// npm i use-dropbox-chooser
-const GOOGLE_DRIVE_CLIENT_ID =
-  "115233091202-gnrihfkkaed9f4k42nadgerg2fcnpnl6.apps.googleusercontent.com";
-const GOOGLE_DIRVE_DEVELOPER_KEY = "AIzaSyB29XZv29ASIZXvLsQFrM4s4sAkNbUdq0A";
-const DROP_BOX_API_KEY = "7oklo3xf71vdg5s";
+import { API_KEY } from "../Api_keys.js";
 
 export default function Content() {
   const [zipFile, setZipFiles] = useState(null);
@@ -29,7 +24,7 @@ export default function Content() {
 
   //dropbox file download
   const { open, isOpen } = useDropboxChooser({
-    appKey: DROP_BOX_API_KEY,
+    appKey: API_KEY.DROP_BOX_API_KEY,
     chooserOptions: { multiple: false, linkType: "direct" },
     onSelected: (files) => {
       var url = files[0].link;
@@ -71,8 +66,34 @@ export default function Content() {
       };
     }
   }, [authResponse, gdriveFile]);
-  var dropBoxFiles = [];
 
+  //google drive file selector
+  const openGoogleDrive = (e) => {
+    e.preventDefault();
+
+    openPicker({
+      clientId: API_KEY.GOOGLE_DRIVE_CLIENT_ID,
+      developerKey: API_KEY.GOOGLE_DIRVE_DEVELOPER_KEY,
+      viewId: "DOCS",
+      // token: token, // pass oauth token in case you already have one
+      showUploadView: true,
+      showUploadFolders: true,
+      setSelectFolderEnabled: true,
+      supportDrives: true,
+      multiselect: false,
+      // customViews: customViewsArray, // custom view
+      callbackFunction: (files) => {
+        // if (data.action === "cancel") {
+        // console.log("User clicked cancel/close button");
+        // }
+        if (files.action === "picked") {
+          if (files.docs[0]) {
+            setGdriveFile(files.docs[0]);
+          }
+        }
+      },
+    });
+  };
   const handleClick = () => {
     inputFileRef.current.click();
   };
@@ -183,34 +204,6 @@ export default function Content() {
     if (e.type === "drop") {
       showFile(e.dataTransfer.files[0], true);
     }
-  };
-
-  //google drive file selector
-  const openGoogleDrive = (e) => {
-    e.preventDefault();
-
-    openPicker({
-      clientId: GOOGLE_DRIVE_CLIENT_ID,
-      developerKey: GOOGLE_DIRVE_DEVELOPER_KEY,
-      viewId: "DOCS",
-      // token: token, // pass oauth token in case you already have one
-      showUploadView: true,
-      showUploadFolders: true,
-      setSelectFolderEnabled: true,
-      supportDrives: true,
-      multiselect: false,
-      // customViews: customViewsArray, // custom view
-      callbackFunction: (files) => {
-        // if (data.action === "cancel") {
-        // console.log("User clicked cancel/close button");
-        // }
-        if (files.action === "picked") {
-          if (files.docs[0]) {
-            setGdriveFile(files.docs[0]);
-          }
-        }
-      },
-    });
   };
 
   //yet to complete.... :)

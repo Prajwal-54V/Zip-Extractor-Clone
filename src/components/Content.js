@@ -391,7 +391,7 @@ export default function Content({ preventDefault }) {
             over 70 types of compressed files, such as 7z, zipx, rar, tar, exe,
             dmg and much more.
           </div>
-          <div className="card" style={{ width: "620px" }}>
+          <div className="card">
             <div className="methods_container" id="meth-cont">
               <button
                 className="btn btn-primary px-4 py-2"

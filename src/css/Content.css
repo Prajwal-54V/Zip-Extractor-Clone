@@ -86,11 +86,6 @@ div.drop_here {
 #desc_bottom {
   margin-bottom: 5rem;
 }
-
-.open_methods {
-  /* display: block;
-  box-sizing: border-box; */
-}
 .open_methods a {
   text-decoration: none;
   background-color: transparent;
@@ -161,4 +156,21 @@ p.single {
 
 #modalBtn {
   display: none;
+}
+
+@media only screen and (mix-width: 480px) {
+  #the_app {
+    margin-bottom: 6rem !important;
+  }
+
+  div.card {
+    display: inline-block !important;
+    box-sizing: border-box;
+    background-clip: border-box;
+    transition: 150ms;
+    margin-bottom: 2rem;
+    min-width: 600px;
+    padding: 10px 15px;
+    justify-items: center;
+  }
 }

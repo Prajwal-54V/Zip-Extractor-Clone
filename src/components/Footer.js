@@ -3,7 +3,7 @@ import "../css/Footer.css";
 
 export default function Footer() {
   return (
-    <div className="container-fluid footer">
+    <div className="container-fluid footer fixed-bottom">
       <div className="row">
         <div className="col-6 d-md-flex flex-row footer-left ms-4 p-3">
           <div className="box copyright me-3" id="copyright">

@@ -40,8 +40,8 @@ div.card {
   background-clip: border-box;
   transition: 150ms;
   margin-bottom: 1.2rem;
-  min-width: 600px;
-  padding: 35px 40px;
+  min-width: 500px;
+  padding: 35px 30px;
   justify-items: center;
 }
 
@@ -169,7 +169,7 @@ p.single {
     background-clip: border-box;
     transition: 150ms;
     margin-bottom: 2rem;
-    min-width: 600px;
+
     padding: 10px 15px;
     justify-items: center;
   }

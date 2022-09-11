@@ -12,38 +12,45 @@ import { useDropboxChooser } from "use-dropbox-chooser";
 import JSZipUtils from "jszip-utils";
 import { BuildFolderTree } from "./FolderStructure.js";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import { API_KEY } from "../Api_keys.js";
+import { API_KEYS } from "../Api_keys.js";
 
-export default function Content() {
+export default function Content({ preventDefault }) {
   const [zipFile, setZipFiles] = useState(null);
   const [hrefs, add_href] = useState([]);
   const inputFileRef = useRef(null);
+  const modalaRef = useRef(null);
 
-  //google drive states
+  const [errorMsg, setErrorMsg] = useState("");
+
+  //    google drive states
   const [openPicker, authResponse] = useDrivePicker();
   const [gdriveFile, setGdriveFile] = useState("");
 
-  //dropbox file download
+  //        dropbox file download
   const { open, isOpen } = useDropboxChooser({
-    appKey: API_KEY.DROP_BOX_API_KEY,
+    appKey: API_KEYS.DROP_BOX_API_KEY,
     chooserOptions: { multiple: false, linkType: "direct" },
     onSelected: (files) => {
+      toggleProgressBarAnimation(true);
       var url = files[0].link;
       var filename = files[0].name;
       JSZipUtils.getBinaryContent(url, (er, data) => {
-        if (er) console.log("er", er);
-        const blob = new Blob([data], { type: "application/zip" });
-        const f = new File([blob], filename, { type: "application/zip" });
-        showFile(f, false);
+        toggleProgressBarAnimation(false);
+        if (er) {
+          setErrorMsg("Error While opening file from dropBox");
+        } else {
+          const blob = new Blob([data], { type: "application/zip" });
+          const f = new File([blob], filename, { type: "application/zip" });
+          showFile(f, true);
+        }
       });
     },
   });
 
-  //
-  // downloading file from google drive
+  //     downloading file from google drive
   useEffect(() => {
     if (authResponse && gdriveFile) {
-      // console.log(gdriveFile);
+      toggleProgressBarAnimation(true);
       var xhr = new XMLHttpRequest();
       var url = `https://www.googleapis.com/drive/v3/files/${gdriveFile.id}?alt=media`;
 
@@ -60,37 +67,38 @@ export default function Content() {
 
         const b = new Blob([content], { type: "application/zip" });
         const f = new File([b], gdriveFile.name, { type: "application/zip" });
+        toggleProgressBarAnimation(false);
         showFile(f, true);
       };
       xhr.onerror = function () {
-        console.log("err");
+        toggleProgressBarAnimation(false);
+        setErrorMsg("Error while downloading Google drive file");
       };
     }
   }, [authResponse, gdriveFile]);
 
-  //google drive file selector
+  //    google drive file selector
   const openGoogleDrive = (e) => {
     e.preventDefault();
 
     openPicker({
-      clientId: API_KEY.GOOGLE_DRIVE_CLIENT_ID,
-      developerKey: API_KEY.GOOGLE_DIRVE_DEVELOPER_KEY,
+      clientId: API_KEYS.GOOGLE_DRIVE_CLIENT_ID,
+      developerKey: API_KEYS.GOOGLE_DIRVE_DEVELOPER_KEY,
       viewId: "DOCS",
-      // token: token, // pass oauth token in case you already have one
       showUploadView: true,
       showUploadFolders: true,
       setSelectFolderEnabled: true,
       supportDrives: true,
       multiselect: false,
-      // customViews: customViewsArray, // custom view
       callbackFunction: (files) => {
-        // if (data.action === "cancel") {
-        // console.log("User clicked cancel/close button");
-        // }
-        if (files.action === "picked") {
-          if (files.docs[0]) {
-            setGdriveFile(files.docs[0]);
+        try {
+          if (files.action === "picked") {
+            if (files.docs[0]) {
+              setGdriveFile(files.docs[0]);
+            }
           }
+        } catch {
+          setErrorMsg("error occured while opening google drive");
         }
       },
     });
@@ -99,31 +107,24 @@ export default function Content() {
     inputFileRef.current.click();
   };
 
+  //    Read and display files
   function showFile(fileName, checkExt) {
     //check file extension
     if (checkExt === true && fileName.name.split(".").pop() !== "zip") {
-      alert("Please Select Zip files only");
+      setErrorMsg("please select zip files only");
       return;
     }
-    //progress bar animation
-    document.getElementById("meth-cont").style.display = "none";
-    document.getElementById("progress-bar-id").style.display = "block";
+    toggleProgressBarAnimation(true);
 
-    //loading zip file
+    //reading zip file content
     JSZip.loadAsync(fileName)
       .then((zips) => {
-        document.getElementById("files_list").style.display = "block";
-        document.getElementById("progress-bar-id").style.display = "none";
-        document.getElementById("top_desc").style.display = "none";
-        document.getElementById("bot_desc").style.display = "none";
-        document.getElementById("the_app").className = "appState_fileIsLoaded";
-
+        //remove progressBar
+        toggleProgressBarAnimation(false);
         //file displaying
         document.getElementById("filename-id").innerText = fileName.name;
         const files = zips.files;
-
         var treeBody = document.getElementById("jstree");
-
         $.jstree.destroy();
         var tree = "";
         treeBody.innerHTML = "";
@@ -155,11 +156,12 @@ export default function Content() {
           }
         }
 
-        //adding all zip files to state
+        //adding all zip files
         setZipFiles({ zipName: fileName.name, zips });
+
+        // jstree
         $(function () {
           $.jstree.create("#jstree");
-          // console.log("jstree init");
           $("#jstree").bind("select_node.jstree", function (e, data) {
             const lastName = data.node.a_attr.id;
             if (lastName.indexOf(".") !== -1) {
@@ -177,43 +179,49 @@ export default function Content() {
         });
         // removing href url's
       })
-      .catch((er) => console.log("error", er));
+      .catch((er) => {
+        setErrorMsg("error while reading zip file !");
+        toggleProgressBarAnimation(false);
+      });
   }
 
-  //select file on drag and drop
+  //    on drag and drop file
   const handleDrag = (e) => {
     e.stopPropagation();
     e.preventDefault();
-    if (e.type === "drop") {
+    if (e.type === "drop" && e.dataTransfer.files) {
       showFile(e.dataTransfer.files[0], true);
     }
   };
 
-  //yet to complete.... :)
+  //    fetching file from URL
   const fecthFromURL = () => {
     var url, filename;
-
     url = prompt("Open file from URL", "https://");
-
-    // url = "https://drive.google.com/uc?export=download&id=" + driveUrl;
     // url = "http://127.0.0.1:8125/testing1.zip";
 
     filename = url.substring(url.lastIndexOf("/") + 1);
+    if (filename.length === 0) filename = "download";
+    if (filename.indexOf(".") === -1) filename += ".zip";
 
     //get file content from url
     JSZipUtils.getBinaryContent(url, (er, data) => {
-      if (er) console.log("er", er);
-      const blob = new Blob([data], { type: "application/zip" });
-      const f = new File([blob], filename, { type: "application/zip" });
-      showFile(f, false);
+      if (er) {
+        setErrorMsg("Error while fetching file from Entered URL");
+      } else {
+        const blob = new Blob([data], { type: "application/zip" });
+        const f = new File([blob], filename, { type: "application/zip" });
+        showFile(f, false);
+      }
     });
   };
-  //saving all files as zip
+
+  //    saving all files as zip
   function saveAllFiles() {
     const zips = zipFile.zips;
     const name = zipFile.zipName;
     if (zips === undefined || zips === null) {
-      console.log("zip files not loaded");
+      setErrorMsg("zip files not loaded ,download failed !");
       return;
     }
     zips.generateAsync({ type: "blob" }).then((c) => {
@@ -221,25 +229,39 @@ export default function Content() {
     });
   }
 
-  //return main content
-  const reloadMainPage = (canceled) => {
+  //  toggling progress bar
+  const toggleProgressBarAnimation = (isOn) => {
+    if (isOn) {
+      document.getElementById("meth-cont").style.display = "none";
+      document.getElementById("progress-bar-id").style.display = "block";
+      document.getElementById("the_app").className = "appState_loading";
+    } else {
+      document.getElementById("files_list").style.display = "block";
+      document.getElementById("progress-bar-id").style.display = "none";
+      document.getElementById("top_desc").style.display = "none";
+      document.getElementById("bot_desc").style.display = "none";
+      document.getElementById("the_app").className = "appState_fileIsLoaded";
+    }
+  };
+  //    return main content
+  const reloadMainPage = () => {
     document.getElementById("files_list").style.display = "none";
     document.getElementById("progress-bar-id").style.display = "none";
-    document.getElementById("desc_top").style.display = "block";
-    document.getElementById("desc_bottom").style.display = "block";
+    document.getElementById("top_desc").style.display = "block";
+    document.getElementById("bot_desc").style.display = "block";
     document.getElementById("jstree").textContent = "";
-    document.getElementById("the_app").className = "bootstrap appState_initial";
+    document.getElementById("the_app").className = "appState_initial";
     document.getElementById("meth-cont").style.display = "block";
   };
 
-  // anchor tag
+  //    anchor tag
   const handleMoreButton = (e) => {
     e.preventDefault();
     document.getElementById("moreBtn").style.display = "none";
     document.getElementById("more_formats").style.display = "block";
   };
 
-  //icons hover effect
+  //    icons hover effect
   const gdriveIconHover = (e) => {
     if (e) {
       document
@@ -289,10 +311,17 @@ export default function Content() {
 
   return (
     <div className="content">
+      <button
+        id="modalBtn"
+        ref={modalaRef}
+        data-bs-toggle="modal"
+        data-bs-target="#modal"
+      ></button>
       <div className="d-flex flex-column" style={{ textAlign: "center" }}>
         <a
           href="/#"
           className="title d-flex flex-row justify-content-center align-items-center mt-3"
+          onClick={preventDefault}
         >
           <img
             className="img-fluid d-inline-block"
@@ -336,6 +365,7 @@ export default function Content() {
                 <a
                   href="/#"
                   className="gdrive m-2"
+                  onClick={openGoogleDrive}
                   onMouseOver={gdriveIconHover}
                   onMouseOut={gdriveIconHoverOut}
                 >
@@ -352,6 +382,11 @@ export default function Content() {
                   className="dropbox m-3"
                   onMouseOver={dropBoxIconHover}
                   onMouseOut={dropBoxIconHoverOut}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    open();
+                  }}
+                  disabled={isOpen}
                 >
                   <img
                     id="dropBoxIcon"
@@ -361,7 +396,14 @@ export default function Content() {
                   />
                   Dropbox
                 </a>
-                <a href="/#" className="url">
+                <a
+                  href="/#"
+                  className="url"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    fecthFromURL();
+                  }}
+                >
                   <img
                     alt=""
                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5.86 12.694l-.81.804a1.812 1.812 0 01-2.545 0 1.751 1.751 0 01-.522-1.251c0-.473.185-.917.522-1.252l2.98-2.956c.618-.613 1.78-1.515 2.626-.675a.991.991 0 101.397-1.407c-1.439-1.428-3.566-1.164-5.42.674l-2.98 2.957A3.72 3.72 0 000 12.247a3.72 3.72 0 001.109 2.658A3.777 3.777 0 003.777 16c.967 0 1.934-.365 2.67-1.095l.81-.804a.991.991 0 10-1.397-1.407zM14.89 1.21c-1.545-1.534-3.707-1.617-5.138-.197l-1.01 1.001A.99.99 0 1010.14 3.42l1.009-1.001c.741-.736 1.712-.431 2.345.197.338.335.523.78.523 1.252s-.185.917-.522 1.252l-3.18 3.154c-1.454 1.442-2.136.765-2.427.476a.991.991 0 00-1.397 1.407c.668.662 1.43.99 2.228.99.978 0 2.01-.492 2.993-1.467l3.18-3.154A3.722 3.722 0 0016 3.868a3.722 3.722 0 00-1.11-2.66z' fill='%23000' fill-rule='evenodd'/%3E%3C/svg%3E"

@@ -143,7 +143,17 @@ p.single {
 .appState_fileIsLoaded .card {
   padding: 20px;
 }
+.appState_initial {
+  margin-bottom: 3rem;
+}
+.appState_loading {
+  margin-bottom: 6rem;
+}
 
-#meth-cont {
-  display: none;
+.jstree-default .jstree-themeicon-custom {
+  /* background-position: -260px -4px !important; */
+  background-size: 16px 16px !important;
+  background-position: 4px 3px !important;
+  opacity: 1 !important;
+  /* background-image: url("../icons/folder.png") !important; */
 }

@@ -142,6 +142,7 @@ p.single {
 
 .appState_fileIsLoaded .card {
   padding: 20px;
+  margin-bottom: 10rem;
 }
 .appState_initial {
   margin-bottom: 3rem;
@@ -156,4 +157,8 @@ p.single {
   background-position: 4px 3px !important;
   opacity: 1 !important;
   /* background-image: url("../icons/folder.png") !important; */
+}
+
+#modalBtn {
+  display: none;
 }

@@ -30,27 +30,36 @@ export default function Content({ preventDefault }) {
   const { open, isOpen } = useDropboxChooser({
     appKey: API_KEYS.DROP_BOX_API_KEY,
     chooserOptions: { multiple: false, linkType: "direct" },
+
     onSelected: (files) => {
-      toggleProgressBarAnimation(true);
+      toggleProgressBarAnimation(true, false);
       var url = files[0].link;
       var filename = files[0].name;
-      JSZipUtils.getBinaryContent(url, (er, data) => {
-        toggleProgressBarAnimation(false);
-        if (er) {
-          setErrorMsg("Error While opening file from dropBox");
-        } else {
-          const blob = new Blob([data], { type: "application/zip" });
-          const f = new File([blob], filename, { type: "application/zip" });
-          showFile(f, true);
-        }
-      });
+      if (filename.split(".").pop() !== "zip") {
+        setErrorMsg("select zip files only");
+        modalaRef.current.click();
+        toggleProgressBarAnimation(false, true);
+      } else {
+        JSZipUtils.getBinaryContent(url, (er, data) => {
+          if (er) {
+            setErrorMsg("Error While opening file from dropBox");
+            modalaRef.current.click();
+            toggleProgressBarAnimation(false, true);
+          } else {
+            const blob = new Blob([data], { type: "application/zip" });
+            const f = new File([blob], filename, { type: "application/zip" });
+            toggleProgressBarAnimation(false, false);
+            showFile(f, true);
+          }
+        });
+      }
     },
   });
 
   //     downloading file from google drive
   useEffect(() => {
     if (authResponse && gdriveFile) {
-      toggleProgressBarAnimation(true);
+      toggleProgressBarAnimation(true, false);
       var xhr = new XMLHttpRequest();
       var url = `https://www.googleapis.com/drive/v3/files/${gdriveFile.id}?alt=media`;
 
@@ -64,15 +73,21 @@ export default function Content({ preventDefault }) {
       xhr.send();
       xhr.onload = function () {
         var content = xhr.response;
-
-        const b = new Blob([content], { type: "application/zip" });
-        const f = new File([b], gdriveFile.name, { type: "application/zip" });
-        toggleProgressBarAnimation(false);
-        showFile(f, true);
+        if (xhr.status === 403 || gdriveFile.name.split(".").pop() !== "zip") {
+          toggleProgressBarAnimation(false, true);
+          setErrorMsg("Please select zip files only");
+          modalaRef.current.click();
+        } else {
+          const b = new Blob([content], { type: "application/zip" });
+          const f = new File([b], gdriveFile.name, { type: "application/zip" });
+          toggleProgressBarAnimation(false, false);
+          showFile(f, true);
+        }
       };
       xhr.onerror = function () {
-        toggleProgressBarAnimation(false);
+        toggleProgressBarAnimation(false, true);
         setErrorMsg("Error while downloading Google drive file");
+        modalaRef.current.click();
       };
     }
   }, [authResponse, gdriveFile]);
@@ -99,6 +114,7 @@ export default function Content({ preventDefault }) {
           }
         } catch {
           setErrorMsg("error occured while opening google drive");
+          modalaRef.current.click();
         }
       },
     });
@@ -110,17 +126,18 @@ export default function Content({ preventDefault }) {
   //    Read and display files
   function showFile(fileName, checkExt) {
     //check file extension
-    if (checkExt === true && fileName.name.split(".").pop() !== "zip") {
+    if (checkExt && fileName.name.split(".").pop() !== "zip") {
       setErrorMsg("please select zip files only");
+      modalaRef.current.click();
       return;
     }
-    toggleProgressBarAnimation(true);
+    toggleProgressBarAnimation(true, false);
 
     //reading zip file content
     JSZip.loadAsync(fileName)
       .then((zips) => {
         //remove progressBar
-        toggleProgressBarAnimation(false);
+        toggleProgressBarAnimation(false, false);
         //file displaying
         document.getElementById("filename-id").innerText = fileName.name;
         const files = zips.files;
@@ -180,8 +197,12 @@ export default function Content({ preventDefault }) {
         // removing href url's
       })
       .catch((er) => {
-        setErrorMsg("error while reading zip file !");
-        toggleProgressBarAnimation(false);
+        toggleProgressBarAnimation(false, true);
+        console.log(er);
+        if (er == "Error: Encrypted zip are not supported")
+          setErrorMsg("Encrypted zip are not supported");
+        else setErrorMsg("error while reading zip file !");
+        modalaRef.current.click();
       });
   }
 
@@ -197,18 +218,24 @@ export default function Content({ preventDefault }) {
   //    fetching file from URL
   const fecthFromURL = () => {
     var url, filename;
+
     url = prompt("Open file from URL", "https://");
     // url = "http://127.0.0.1:8125/testing1.zip";
+    if (url === null || url === undefined) return;
 
     filename = url.substring(url.lastIndexOf("/") + 1);
-    if (filename.length === 0) filename = "download";
-    if (filename.indexOf(".") === -1) filename += ".zip";
 
+    if (filename.indexOf(".") === -1) filename += ".zip";
+    if (filename.length === 0) filename = "download";
     //get file content from url
+    toggleProgressBarAnimation(true, false);
     JSZipUtils.getBinaryContent(url, (er, data) => {
-      if (er) {
-        setErrorMsg("Error while fetching file from Entered URL");
+      if (er || data === null || data === undefined) {
+        toggleProgressBarAnimation(false, true);
+        setErrorMsg("Error while fetching zip file from Entered URL ");
+        modalaRef.current.click();
       } else {
+        toggleProgressBarAnimation(false, false);
         const blob = new Blob([data], { type: "application/zip" });
         const f = new File([blob], filename, { type: "application/zip" });
         showFile(f, false);
@@ -222,6 +249,7 @@ export default function Content({ preventDefault }) {
     const name = zipFile.zipName;
     if (zips === undefined || zips === null) {
       setErrorMsg("zip files not loaded ,download failed !");
+      modalaRef.current.click();
       return;
     }
     zips.generateAsync({ type: "blob" }).then((c) => {
@@ -230,17 +258,23 @@ export default function Content({ preventDefault }) {
   }
 
   //  toggling progress bar
-  const toggleProgressBarAnimation = (isOn) => {
-    if (isOn) {
+  const toggleProgressBarAnimation = (isOn, isError) => {
+    if (isOn === true) {
       document.getElementById("meth-cont").style.display = "none";
       document.getElementById("progress-bar-id").style.display = "block";
       document.getElementById("the_app").className = "appState_loading";
-    } else {
-      document.getElementById("files_list").style.display = "block";
+    } else if (isOn === false) {
+      document.getElementById("files_list").style.display =
+        isError === true ? "none" : "block";
       document.getElementById("progress-bar-id").style.display = "none";
-      document.getElementById("top_desc").style.display = "none";
-      document.getElementById("bot_desc").style.display = "none";
-      document.getElementById("the_app").className = "appState_fileIsLoaded";
+      document.getElementById("top_desc").style.display =
+        isError === true ? "block" : "none";
+      document.getElementById("bot_desc").style.display =
+        isError === true ? "block" : "none";
+      document.getElementById("the_app").className =
+        isError === true ? "appState_initial" : "appState_fileIsLoaded";
+      document.getElementById("meth-cont").style.display =
+        isError === true ? "block" : "none";
     }
   };
   //    return main content
@@ -317,6 +351,25 @@ export default function Content({ preventDefault }) {
         data-bs-toggle="modal"
         data-bs-target="#modal"
       ></button>
+      <div className="modal fade" id="modal">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h4>Error</h4>
+            </div>
+            <div className="modal-body">
+              Something went wrong...
+              <br />
+              {errorMsg}
+            </div>
+            <div className="modal-footer">
+              <button className="btn btn-primary" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="d-flex flex-column" style={{ textAlign: "center" }}>
         <a
           href="/#"
